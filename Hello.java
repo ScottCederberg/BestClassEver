@@ -1,12 +1,22 @@
 public class Hello {
 
+    private static String getFancyGreeting() {
+	return "~~~~ Ooooh... now that's *fancy*!~~~~\n"
+	    + System.out.println("Hello there!");
+    }
+
+    private static String getSimpleGreeting() {
+	return "Hello, git user!  You are awesome!";
+    }
+
     public static void main(String[] args) {
+	String greeting;
 	if (args.length > 0 && "-f".equals(args[0])) {
-	    System.out.println("~~~~ Ooooh... now that's *fancy*!~~~~");
-	    System.out.println("Hello there!");
+	    greeting = getFancyGreeting();
 	} else {
-	    System.out.println("Hello, git user!  You are awesome!");
+	    greeting = getSimpleGreeting();
 	}
+	System.out.println(greeting);
     }
 
 }
